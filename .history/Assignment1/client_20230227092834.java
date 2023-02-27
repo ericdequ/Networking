@@ -6,7 +6,7 @@ public class client{
     public static void main(String[] args) throws IOException{
 
         /* Client creats a new socket at localhost + port 4999 */
-        Socket s = new Socket("localhost", 6698);
+        Socket s = new Socket("localhost", );
         PrintWriter pr = new PrintWriter(s.getOutputStream());
 
         /* Gets user input from the user  */

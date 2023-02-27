@@ -12,7 +12,7 @@ public class server{
         String Error_File = "Error_Page.txt";
 
         /*Creats a new Server Socket on Port 4999 */
-        ServerSocket ss = new ServerSocket(6698);
+        ServerSocket ss = new ServerSocket();
         String str = "";
         boolean x = true;
 
