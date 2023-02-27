@@ -37,7 +37,7 @@ public class server{
             /* Is the switch statement for taking in client input and deciding what joke to send */
             if(str.equals("Joke 1")){
                 Joke = Files.readString(Paths.get(Joke1File));
-            } else if (str.equals("JOke 2")){
+            } else if (str.equals("Joke 2")){
                 Joke = Files.readString(Paths.get(Joke2File));
             } else if (str.equals("Joke 3")){
                 Joke = Files.readString(Paths.get(Joke3File));

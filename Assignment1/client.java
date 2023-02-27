@@ -5,13 +5,15 @@ import java.util.Scanner;
 public class client{
     public static void main(String[] args) throws IOException{
 
+        boolean x = true;
+        while(x){
         /* Client creats a new socket at localhost + port 4999 */
         Socket s = new Socket("localhost", 6698);
         PrintWriter pr = new PrintWriter(s.getOutputStream());
 
         /* Gets user input from the user  */
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please Enter a Number 1-3");
+        System.out.println("Please Enter a Number 'Joke 1', 'Joke 2', or 'joke 3' type 'exit' to leave and shutdown comedy server ");
 
         /*Handles user input and sends it to the Server */
         String joke_input = sc.nextLine();
@@ -27,5 +29,9 @@ public class client{
         System.out.println("Joke is : "+ str);
 
         s.close();
+        if(joke_input.equals("exit")){
+            x = false;
+        }
+        }
     }
 }
