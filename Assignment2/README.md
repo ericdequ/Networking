@@ -51,13 +51,13 @@ Report
 
 - Your submitted report file should be named "report.pdf" and include the following:
 
-- - Your personal information: Full name, UF ID, and Email
-- - How to compile and run your code under a Linux environment.
-- - Description of your code structure.
-- - Show some execution results.
-- - Statistics/Error report on ALL THREE experiments
-- - Lesson learned
-- - Any additional comments.
+ - Your personal information: Full name, UF ID, and Email
+ - How to compile and run your code under a Linux environment.
+ - Description of your code structure.
+ - Show some execution results.
+ - Statistics/Error report on ALL THREE experiments
+ - Lesson learned
+ - Any additional comments.
 
 
 
