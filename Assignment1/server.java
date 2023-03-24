@@ -17,6 +17,7 @@ public class server{
         boolean x = true;
 
         while (x){
+            long startTime = System.nanoTime();
             /* Waits until Client is connected when client connects it prints message */
             Socket s = ss.accept();
             System.out.println("Client Connected");
@@ -34,19 +35,24 @@ public class server{
             String Joke = "";
 
 
-            /* Is the switch statement for taking in client input and deciding what joke to send */
-            if(str.equals("Joke 1")){
+             /* Is the switch statement for taking in client input and deciding what joke to send */
+             if (str.equals("Joke 1")) {
                 Joke = Files.readString(Paths.get(Joke1File));
-            } else if (str.equals("Joke 2")){
+            } else if (str.equals("Joke 2")) {
                 Joke = Files.readString(Paths.get(Joke2File));
-            } else if (str.equals("Joke 3")){
+            } else if (str.equals("Joke 3")) {
                 Joke = Files.readString(Paths.get(Joke3File));
-            } else if(str.equals("exit")){
+            } else if (str.equals("exit")) {
                 Joke = "leaving Thanks for using java comedy server";
                 x = false;
-            } else{ 
+            } else {
                 Joke = Files.readString(Paths.get(Error_File));
             }
+
+            // End the timer for the joke meme access time locally
+            long endTime = System.nanoTime();
+            long duration = (endTime - startTime) / 1000000;
+            System.out.println("Joke meme access time (in ms): " + duration);
 
             /*Adds Joke to pr and then sends it back to client */
             pr.println(Joke);
