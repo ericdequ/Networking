@@ -4,21 +4,22 @@ import java.net.*;
 import java.io.*;
 import java.nio.file.*;
 import java.util.Random;
+import java.util.Scanner;
 
 public class server {
     public static void main(String[] args) throws IOException {
         // Array of file names containing the jokes
         String[] jokeFiles = new String[]{
-                "../jokes/Joke1.txt",
-                "../jokes/Joke2.txt",
-                "../jokes/Joke3.txt",
-                "../jokes/Joke4.txt",
-                "../jokes/Joke5.txt",
-                "../jokes/Joke6.txt",
-                "../jokes/Joke7.txt",
-                "../jokes/Joke8.txt",
-                "../jokes/Joke9.txt",
-                "../jokes/Joke10.txt"
+                "../jokes/joke1.txt",
+                "../jokes/joke2.txt",
+                "../jokes/joke3.txt",
+                "../jokes/joke4.txt",
+                "../jokes/joke5.txt",
+                "../jokes/joke6.txt",
+                "../jokes/joke7.txt",
+                "../jokes/joke8.txt",
+                "../jokes/joke9.txt",
+                "../jokes/joke10.txt"
         };
         String Error_File = "Error_Page.txt";
 
@@ -29,21 +30,27 @@ public class server {
                 // Prepare a buffer to receive the client's request
                 byte[] receiveBuffer = new byte[1024];
 
+                long startTime = System.nanoTime();
+
+
                 // Receive the client's request into the buffer
                 DatagramPacket receivePacket = new DatagramPacket(receiveBuffer, receiveBuffer.length);
                 socket.receive(receivePacket);
 
-                // Start the timer for the joke meme access time locally
-                long startTime = System.nanoTime();
+                // Ask the user to approve or deny the client connection
+                System.out.println("A client is trying to connect. Do you want to approve (y) or deny (n) the connection?");
+                Scanner scanner = new Scanner(System.in);
+                String input = scanner.nextLine();
+                boolean approved = input.equalsIgnoreCase("y");
 
                 // Extract the client's request from the buffer
                 String str = new String(receivePacket.getData(), 0, receivePacket.getLength());
-                System.out.println("client's response is : " + str);
+                System.out.println("Client's response is : " + str);
 
                 // Prepare a buffer to send the server's response
                 byte[] sendBuffer;
 
-                if (str.equals("get_joke")) {
+                if (approved && str.equals("get_joke")) {
                     // Generate a random number between 0 and 9 to select a joke file
                     Random random = new Random();
                     int jokeIndex = random.nextInt(10);
@@ -59,7 +66,7 @@ public class server {
                     long duration = (endTime - startTime) / 1000000;
                     System.out.println("Joke meme access time (in ms): " + duration);
                 } else {
-                    // If the client's request is not recognized, send the error file content
+                    // If the client's request is not recognized or denied, send the error file content
                     String joke = Files.readString(Paths.get(Error_File));
                     sendBuffer = joke.getBytes();
                 }

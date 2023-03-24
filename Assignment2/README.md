@@ -18,7 +18,6 @@ In this programming assignment, you will measure the timing performance and anal
 ## Experiments
 
 Summarize your statistics/error findings in your report on all three experiments as the following:
-
 - **Experiment#1 (Baseline Performance)**: The statistics shall be measured via the "localhost" on the same machine on both TCP and UDP versions. Note there is no connection setup for UDP, the second time-component is thus replaced with DNS-lookup-only for UDP.
 - **Experiment#2 (LAN Performance)**: Extend the TCP and UDP measurements for actual communication via 100-Mbps Ethernet LAN between two CISE machines in Lab 114. Compare and analyze the statistics between this experiment and Experiment#1.
 - **Experiment#3 (MAN Performance)**: Extend the TCP and UDP measurements by placing the server process at a CISE machine and the client process at your apartment. Compare and analyze the statistics between this experiment and Experiment#2.
