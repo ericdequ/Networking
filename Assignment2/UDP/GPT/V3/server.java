@@ -20,7 +20,8 @@ public class server {
                 "jokes/joke9.txt",
                 "jokes/joke10.txt"
         };
-        String Error_File = "Error_Page.txt";
+
+        String Error_File = "jokes/Error_Page.txt";
 
         try (DatagramSocket socket = new DatagramSocket(6698)) {
             boolean x = true;
@@ -29,6 +30,10 @@ public class server {
                 byte[] receiveBuffer = new byte[1024];
                 DatagramPacket receivePacket = new DatagramPacket(receiveBuffer, receiveBuffer.length);
                 socket.receive(receivePacket);
+
+                String clientInfo = "Client IP: " + receivePacket.getAddress() + "\n" +
+                        "Client port: " + receivePacket.getPort() + "\n";
+                System.out.println(clientInfo);
 
                 System.out.println("A client is trying to connect. Do you want to approve (y) or deny (n) the connection?");
                 Scanner scanner = new Scanner(System.in);
@@ -75,6 +80,7 @@ public class server {
             }
         }
     }
+
 
     private static String getRandomScienceFact() {
         String[] scienceFacts = {
