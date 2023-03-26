@@ -1,1 +1,0 @@
-Why did the functions stop calling each other? They had constant arguments.
