@@ -1,4 +1,5 @@
-package V2;
+package P2;
+
 import java.net.*;
 import java.io.*;
 import java.nio.file.*;
@@ -23,7 +24,6 @@ public class server {
 
         // Create a UDP socket on port 6698
         DatagramSocket socket = new DatagramSocket(6698);
-        boolean x = true;
 
         // Initialize variables for statistics
         long[] localAccessTimes = new long[10];
@@ -91,17 +91,17 @@ public class server {
         double mean = sum / 10;
         double sumOfSquares = 0;
         for (long time : localAccessTimes) {
+           
             sumOfSquares += Math.pow(time - mean, 2);
         }
         double stddev = Math.sqrt(sumOfSquares / 10);
-
         System.out.println("Local Joke Meme Access Time (in ms):");
         System.out.println("Min: " + min);
         System.out.println("Mean: " + mean);
         System.out.println("Max: " + max);
         System.out.println("StdDev: " + stddev);
-
+    
         // Close the UDP socket
         socket.close();
     }
-}
+}    

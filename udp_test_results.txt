@@ -1,0 +1,45 @@
+Experiment 1:
+Total round-trip time (in ms): 94
+Joke: What's a programmer's favorite type of music? Algo-rhythms!
+----------------------------
+Experiment 2:
+Total round-trip time (in ms): 1
+Joke: Why do Java developers wear glasses? Because they don't C#! (C Sharp)
+----------------------------
+Experiment 3:
+Total round-trip time (in ms): 1
+Joke: Why did the functions stop calling each other? They had constant arguments.
+----------------------------
+Experiment 4:
+Total round-trip time (in ms): 1
+Joke: Why did the programmer go broke? They used up all their cache.
+----------------------------
+Experiment 5:
+Total round-trip time (in ms): 1
+Joke: Why did the functions stop calling each other? They had constant arguments.
+----------------------------
+Experiment 6:
+Total round-trip time (in ms): 1
+Joke: Why did the functions stop calling each other? They had constant arguments.
+----------------------------
+Experiment 7:
+Total round-trip time (in ms): 1
+Joke: Why do Java developers wear glasses? Because they don't C#! (C Sharp)
+----------------------------
+Experiment 8:
+Total round-trip time (in ms): 1
+Joke: How did the programmer break their tooth? They bit into a byte.
+----------------------------
+Experiment 9:
+Total round-trip time (in ms): 1
+Joke: Why did the programmer go broke? They used up all their cache.
+----------------------------
+Experiment 10:
+Total round-trip time (in ms): 1
+Joke: Why don't programmers like nature? It has too many bugs.
+----------------------------
+Summary:
+Min: 1.0 ms
+Mean: 10.3 ms
+Max: 94.0 ms
+StdDev: 27.9 ms

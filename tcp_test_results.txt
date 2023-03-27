@@ -1,0 +1,45 @@
+Experiment 1:
+Total round-trip time (in ms): 69
+Joke: Why do Java developers wear glasses? Because they don't C#! (C Sharp)
+----------------------------
+Experiment 2:
+Total round-trip time (in ms): 2
+Joke: Why do programmers always mix up Christmas and Halloween? Because Oct 31 == Dec 25!
+----------------------------
+Experiment 3:
+Total round-trip time (in ms): 2
+Joke: Why do Java developers wear glasses? Because they don't C#! (C Sharp)
+----------------------------
+Experiment 4:
+Total round-trip time (in ms): 2
+Joke: Why did the programmer get stuck in the shower? The shampoo bottle said "Lather, Rinse, Repeat."
+----------------------------
+Experiment 5:
+Total round-trip time (in ms): 1
+Joke: Why did the programmer get stuck in the shower? The shampoo bottle said "Lather, Rinse, Repeat."
+----------------------------
+Experiment 6:
+Total round-trip time (in ms): 2
+Joke: Why do programmers always mix up Christmas and Halloween? Because Oct 31 == Dec 25!
+----------------------------
+Experiment 7:
+Total round-trip time (in ms): 2
+Joke: Why do Java developers wear glasses? Because they don't C#! (C Sharp)
+----------------------------
+Experiment 8:
+Total round-trip time (in ms): 2
+Joke: Why do Java developers wear glasses? Because they don't C#! (C Sharp)
+----------------------------
+Experiment 9:
+Total round-trip time (in ms): 2
+Joke: Why do programmers always mix up Christmas and Halloween? Because Oct 31 == Dec 25!
+----------------------------
+Experiment 10:
+Total round-trip time (in ms): 1
+Joke: Why did the programmer get stuck in the shower? The shampoo bottle said "Lather, Rinse, Repeat."
+----------------------------
+Summary:
+Min: 1.0 ms
+Mean: 8.5 ms
+Max: 69.0 ms
+StdDev: 20.2 ms
