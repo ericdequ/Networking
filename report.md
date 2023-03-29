@@ -10,15 +10,15 @@
 `sudo apt-get install openjdk-11-jdk`
 ## Compiling the Code
 ### move into folder and compile the code using the following commands:
-`javac udp_server.java`
-`javac udp_client.java`
-`javac udp_client_test.java`
-`javac tcp_server.java`
-`javac tcp_client.java`
-`javac tcp_client_test.java`
+ - `javac udp_server.java`
+ - `javac udp_client.java`
+ - `javac udp_client_test.java`
+ - `javac tcp_server.java`
+ - `javac tcp_client.java`
+ - `javac tcp_client_test.java`
 
 
-##Running the Code
+## Running the Code
 ### To run the code, open separate terminal windows for the server and client. outside the file after compiling the code. The server must be run first, followed by the client or test 
 
 ## For the UDP server:
@@ -46,18 +46,19 @@ The code is divided into four parts: UDP server, UDP client test, TCP server, an
 
 
 ## Statistics/Error Report on All Three Experiments
+
 ## Experiment#1 (Baseline Performance)
 
-The first experiment measures the statistics of the round-trip time for communication between the server and client on the same machine using both UDP and TCP protocols. The results are as follows:
+### The first experiment measures the statistics of the round-trip time for communication between the server and client on the same machine using both UDP and TCP protocols. The results are as follows:
 
-## UDP:
+### UDP:
 Local Joke Meme Access Time (in ms):
  - Min: 1.0 ms
  - Mean: 6.6 ms
  - Max: 57.0 ms
  - StdDev: 16.800000000000004 ms
 
-## TCP:
+### TCP:
 Local Joke Meme Access Time (in ms):
  - Min: 1.0 ms
  - Mean: 8.5 ms
@@ -66,15 +67,16 @@ Local Joke Meme Access Time (in ms):
 
 
 ## Experiment#2 (LAN Performance)
-The second experiment measures the statistics of the round-trip time for communication between the server and client via 100-Mbps Ethernet LAN between two CISE machines in Lab 114.
 
-## UDP:
+### The second experiment measures the statistics of the round-trip time for communication between the server and client via 100-Mbps Ethernet LAN between two CISE machines in Lab 114.
+
+### UDP:
 Local Joke Meme Access Time (in ms):
  - Min: 1.0
  - Mean: 5.0
  - Max: 31.0
  - StdDev: 8.706319543871567
-## TCP:
+### TCP:
 Local Joke Meme Access Time (in ms):
  - Min: 2.0 ms
  - Mean: 16.4 ms
@@ -82,15 +84,18 @@ Local Joke Meme Access Time (in ms):
  - StdDev: 41.6 ms
 
  ## Experiment#3 (MAN Performance)
-The third experiment measures the statistics of the round-trip time for communication between the server process at a CISE machine and the client process at an apartment.
-UDP:
+### The third experiment measures the statistics of the round-trip time for communication between the server process at a CISE machine and the client process at an apartment.
+
+
+### UDP:
 Local Joke Meme Access Time (in ms):
  - Min: 2.0
  - Mean: 23.4
  - Max: 58.0
  - StdDev: 16.16910634512619
 
-## TCP:
+
+### TCP:
 Local Joke Meme Access Time (in ms):
  - Min: 3.0 ms
  - Mean: 16.7 ms

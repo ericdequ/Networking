@@ -3,6 +3,8 @@ package Eric_deQuevedo_59516698;
 import java.net.*;
 import java.io.*;
 import java.util.Scanner;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 
 public class tcp_client {
     public static void main(String[] args) {
@@ -25,20 +27,28 @@ public class tcp_client {
                 pr.println(joke_input);
                 pr.flush();
 
-                // Create a BufferedReader to read the server's response
-                InputStreamReader in = new InputStreamReader(s.getInputStream());
-                BufferedReader bf = new BufferedReader(in);
+                // Create a DataInputStream to read the image data from the server
+                DataInputStream dis = new DataInputStream(s.getInputStream());
 
-                // Read the server's response
-                String str = bf.readLine();
+                // Read the length of the image data
+                int imageDataLength = dis.readInt();
+
+                // Read the image data
+                byte[] imageData = new byte[imageDataLength];
+                dis.readFully(imageData);
+
+                // Convert the image data to a BufferedImage
+                InputStream in = new ByteArrayInputStream(imageData);
+                BufferedImage image = ImageIO.read(in);
+
+                // Display the image on the screen
+                ImageIO.write(image, "jpg", new File("received_joke.jpg"));
+                System.out.println("Joke is saved as received_joke.jpg");
 
                 // End the timer for the total round-trip time
                 long endTime = System.nanoTime();
                 long duration = (endTime - startTime) / 1000000;
                 System.out.println("Total round-trip time (in ms): " + duration);
-
-                // Print the received joke
-                System.out.println("Joke is : " + str);
 
                 // Close the socket
                 s.close();
